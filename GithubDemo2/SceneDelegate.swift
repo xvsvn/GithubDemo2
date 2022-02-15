@@ -49,7 +49,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
+    func callHomeController(){
+    let vc:HomeViewController=HomeViewController(nibName:
+    "HomeViewController", bundle: nil)
+    if self.window == nil {
+    self.window = UIWindow (frame: UIScreen.main.bounds)
+    }
+    self.window? .rootViewController
+    = vc
+    self.window? .makeKeyAndVisible()
+    }
 
 }
-
